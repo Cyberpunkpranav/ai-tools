@@ -13,6 +13,7 @@ import { CodeGenerator } from './components/tools/CodeGenerator';
 import { EmailGenerator } from './components/tools/EmailGenerator';
 import { DocumentTranslator } from './components/tools/DocumentTranslator';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
+import Jobs from './pages/jobs';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/prescription" element={<PrescriptionReader />} />
+            <Route path='/jobs' element={<Jobs/>}/>
             <Route path="/translator" element={<DocumentTranslator />} />
             <Route path="/hashtags" element={<HashtagGenerator />} />
             <Route path="/image-analyzer" element={<ImageAnalyzer />} />

@@ -1,0 +1,12 @@
+.card{
+    border: 1px solid gray;
+    width: 30%;
+    height: 10rem;
+    padding: 10px;
+    text-decoration: none;
+}
+.card a{
+    color: purple;
+    font-size: 12px;
+    text-decoration: underline;
+}
