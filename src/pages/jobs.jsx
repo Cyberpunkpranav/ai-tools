@@ -22,20 +22,31 @@ const Jobs = () => {
         {
         jobs&&jobs.map((data)=>(
             <a target='__blank' href={data.url} className={styles.card}>
-                <div className="flex items-center justify-between">
+                <div className="justify-between">
                 <h2>{data.job_title}</h2>
                 <h6>{data.site}</h6>
-                </div>
+                <h5>{data.location}</h5>
+                <p>{data.experience}</p>
+                <p>{data.salary_package}</p>
                 {
-                data.links.map((link)=>(
-                    <a className='inline-block mx-4' target='__blank' href={link.link}>{link.title}</a>
-                ))
+                    data.stats.map((stat)=>(
+                        <div className='flex items-center'>
+                        <span>{stat.label}{stat.value}</span>
+                        </div>
+                    ))
                 }
+                {
+                    data.key_skills.map((skills)=>(
+                        <button className='mx-5'>{skills}</button>
+                    ))
+                }
+                <h5>About company</h5>
+                {/* <a target='__blank' href={data.review.url}>{data.ratings?data.ratings:'view ratings'}</a> */}
+                </div>
             </a>
-   
         ))
-
         }
+
     </div>
     </section>
   )
